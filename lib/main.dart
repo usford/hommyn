@@ -16,6 +16,13 @@ void main() => runApp
 
 class MyApp extends StatelessWidget
 {
+  bool _valueTemperature = false;
+
+  void _onChangedTemperature(bool value)
+  {
+    _valueTemperature = value;
+  }
+
   @override
   Widget build(BuildContext context)
   {
@@ -120,11 +127,77 @@ class MyApp extends StatelessWidget
                     [
                       Expanded
                       (
-                        child: Text('Подробности 1', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                        flex:1,
+                        child: Card
+                        (
+                          color: Colors.white,
+                          child: Column
+                          (
+                            children: <Widget>
+                            [
+                              Expanded
+                              (
+                                child: Row
+                                (
+                                  children: <Widget>
+                                  [
+                                    Expanded
+                                    (
+                                      child: Text('Градусник (Картинка)', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                                    ),
+                                    Expanded
+                                    (
+                                      child: Text('Температура', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                                    )
+                                  ],
+                                )
+                              ),
+                              Expanded
+                              (
+                                child: Row
+                                (
+                                  children: <Widget>
+                                  [
+                                    Expanded
+                                    (
+                                      child: Switch
+                                      (
+                                        inactiveTrackColor: Colors.grey,
+                                        inactiveThumbColor: Colors.black,
+                                        activeColor: Colors.black,
+                                        activeTrackColor: Colors.blue,
+                                        value: _valueTemperature,
+                                        onChanged: (bool value){_onChangedTemperature(value);},
+                                      ),
+                                    ),
+                                    Expanded
+                                    (
+                                      child: Text('Снежинка (Картинка)', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                                    )
+                                  ],
+                                )
+                              )
+                            ],
+                          ),    
+                        ),
                       ),
                       Expanded
                       (
-                        child: Text('График 1', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                        flex: 4,
+                        child: Card
+                        (
+                          color: Colors.white,
+                          child: Column
+                          (
+                            children: <Widget>
+                            [
+                              Expanded
+                              (
+                                child: Text('График', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
