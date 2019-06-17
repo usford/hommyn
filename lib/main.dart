@@ -114,7 +114,7 @@ class MyApp extends StatelessWidget
           flex: 7,
           child: Container
           (
-            color: Colors.red,
+            color: Color(0xFF0c141c),
             child: Column
             (
               children: <Widget>
@@ -130,20 +130,24 @@ class MyApp extends StatelessWidget
                         flex:1,
                         child: Card
                         (
-                          color: Colors.white,
+                          color: Colors.grey,
                           child: Column
                           (
                             children: <Widget>
                             [
                               Expanded
                               (
+                                flex: 2,
                                 child: Row
                                 (
                                   children: <Widget>
                                   [
                                     Expanded
                                     (
-                                      child: Text('Градусник (Картинка)', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                                      child: Image
+                                      (
+                                        image: ExactAssetImage('pictures/thermometer.png'),
+                                      ),
                                     ),
                                     Expanded
                                     (
@@ -154,6 +158,7 @@ class MyApp extends StatelessWidget
                               ),
                               Expanded
                               (
+                                flex: 1,
                                 child: Row
                                 (
                                   children: <Widget>
@@ -162,7 +167,7 @@ class MyApp extends StatelessWidget
                                     (
                                       child: Switch
                                       (
-                                        inactiveTrackColor: Colors.grey,
+                                        inactiveTrackColor: Colors.blueGrey,
                                         inactiveThumbColor: Colors.black,
                                         activeColor: Colors.black,
                                         activeTrackColor: Colors.blue,
@@ -172,7 +177,10 @@ class MyApp extends StatelessWidget
                                     ),
                                     Expanded
                                     (
-                                      child: Text('Снежинка (Картинка)', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                                      child: Image
+                                      (
+                                        image: ExactAssetImage('pictures/snowflake.png'),
+                                      ),
                                     )
                                   ],
                                 )
@@ -186,7 +194,7 @@ class MyApp extends StatelessWidget
                         flex: 4,
                         child: Card
                         (
-                          color: Colors.white,
+                          color: Colors.grey,
                           child: Column
                           (
                             children: <Widget>
