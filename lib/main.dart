@@ -151,7 +151,30 @@ class MyApp extends StatelessWidget
                                     ),
                                     Expanded
                                     (
-                                      child: Text('Температура', textDirection: TextDirection.ltr, textAlign: TextAlign.center),
+                                      child: ListView
+                                      (
+                                        children: <Widget>
+                                        [
+                                          Text('1', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('2', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('3', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('4', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('5', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('6', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('7', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('8', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('9', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('10', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('11', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('12', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('13', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('14', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('15', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('16', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('17', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                          Text('18', textAlign: TextAlign.center, style: TextStyle(fontSize: 42)),
+                                        ],
+                                      ),
                                     )
                                   ],
                                 )
